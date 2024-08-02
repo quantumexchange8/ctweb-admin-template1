@@ -76,6 +76,44 @@ if ($('.adomx-dropdown').length) {
         // });
 
 
+        /*--
+    Handle the sidebar swap
+-----------------------------------*/ 
+document.addEventListener('DOMContentLoaded', function() {
+    const body = document.body;
+    const sidebarToggleBtn = document.getElementById('sidebarSwap-toggle');
+
+    sidebarToggleBtn.addEventListener('click', function() {
+        if (body.getAttribute('dir') === 'rtl') {
+            body.removeAttribute('dir');
+        } else {
+            body.setAttribute('dir', 'rtl');
+        }
+    });
+});
+
+// document.addEventListener('DOMContentLoaded', function() {
+//         const body = document.body;
+//         const sidebarToggleBtn = document.getElementById('sidebarSwap-toggle');
+
+//         // Check localStorage for the saved sidebar mode
+//         const savedSidebarMode = localStorage.getItem('sidebarMode');
+//         if (savedSidebarMode) {
+//             body.setAttribute('dir', savedSidebarMode);
+//         }
+
+//         sidebarToggleBtn.addEventListener('click', function() {
+//             if (body.getAttribute('dir') === 'rtl') {
+//                 body.removeAttribute('dir');
+//                 localStorage.removeItem('sidebarMode'); // Remove the setting from localStorage
+//             } else {
+//                 body.setAttribute('dir', 'rtl');
+//                 localStorage.setItem('sidebarMode', 'rtl'); // Save the setting to localStorage
+//             }
+//         });
+//     });
+
+
 
 /*--
     Header Search Open/Close

@@ -45,6 +45,13 @@
                                     <img src="assets/images/icons/lightbulb.png" alt="Toggle Theme"></div>
                                 </button>
                             </div>
+
+                            <!-- Sidebar swap button -->
+                            <div class="col-auto">
+                                <button id="sidebarSwap-toggle" class="btn btn-theme-toggle"><div class="image">
+                                    <img src="assets/images/icons/swap.png" alt="Sidebar Swap">
+                                </button>
+                            </div>
                             
 
                         </div>
