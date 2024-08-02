@@ -38,42 +38,42 @@ if ($('.adomx-dropdown').length) {
     Handle the theme toggle for switching dark mode to light mode
 -----------------------------------*/
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const body = document.body;
-        const themeToggleBtn = document.getElementById('theme-toggle');
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const body = document.body;
+    //     const themeToggleBtn = document.getElementById('theme-toggle');
 
-        themeToggleBtn.addEventListener('click', function() {
-            if (body.classList.contains('skin-dark')) {
-                body.classList.remove('skin-dark');
-            } else {
+    //     themeToggleBtn.addEventListener('click', function() {
+    //         if (body.classList.contains('skin-dark')) {
+    //             body.classList.remove('skin-dark');
+    //         } else {
+    //             body.classList.add('skin-dark');
+    //         }
+    //     });
+    // });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            const themeToggleBtn = document.getElementById('theme-toggle');
+        
+            // Apply the saved theme on page load
+            if (localStorage.getItem('theme') === 'dark') {
                 body.classList.add('skin-dark');
+            } else {
+                body.classList.remove('skin-dark');
             }
+        
+            // Toggle theme and save the preference
+            themeToggleBtn.addEventListener('click', function() {
+                if (body.classList.contains('skin-dark')) {
+                    body.classList.remove('skin-dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    body.classList.add('skin-dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
         });
-    });
-
-
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     const body = document.body;
-        //     const themeToggleBtn = document.getElementById('theme-toggle');
-        
-        //     // Apply the saved theme on page load
-        //     if (localStorage.getItem('theme') === 'dark') {
-        //         body.classList.add('skin-dark');
-        //     } else {
-        //         body.classList.remove('skin-dark');
-        //     }
-        
-        //     // Toggle theme and save the preference
-        //     themeToggleBtn.addEventListener('click', function() {
-        //         if (body.classList.contains('skin-dark')) {
-        //             body.classList.remove('skin-dark');
-        //             localStorage.setItem('theme', 'light');
-        //         } else {
-        //             body.classList.add('skin-dark');
-        //             localStorage.setItem('theme', 'dark');
-        //         }
-        //     });
-        // });
 
 
         /*--

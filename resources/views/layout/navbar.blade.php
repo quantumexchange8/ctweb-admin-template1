@@ -40,11 +40,11 @@
                             </div>
 
                              <!-- Switch Button for Dark/Light Mode -->
-                            <div class="col-auto">
+                            {{-- <div class="col-auto">
                                 <button id="theme-toggle" class="btn btn-theme-toggle"><div class="image">
                                     <img src="assets/images/icons/lightbulb.png" alt="Toggle Theme"></div>
                                 </button>
-                            </div>
+                            </div> --}}
 
                             <!-- Sidebar swap button -->
                             <div class="col-auto">
